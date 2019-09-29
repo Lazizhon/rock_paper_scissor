@@ -16,28 +16,28 @@ function singleRound() {
         return "double paper"
     }
     if (humanChose == "paper" & pcChose == "scissors") {
-        return "you lose:( scissors beats paper"
+        return "you lose:( scissors beats paper" + aiScore++
     }
     if (humanChose == "paper" & pcChose == "rock") {
-        return "you win! paper beats rock"
+        return "you win! paper beats rock " + humanScore++
     }
     if (humanChose == "scissors" & pcChose == "scissors") {
         return "double scissors"
     }
     if (humanChose == "scissors" & pcChose == "paper") {
-        return "you win! scissors beats paper"
+        return "you win! scissors beats paper"+ humanScore++
     }
     if (humanChose == "scissors" & pcChose == "rock") {
-        return "you lose :( rock beats scissors"
+        return "you lose :( rock beats scissors"  + aiScore++
     }
     if (humanChose == "rock" & pcChose == "rock") {
         return "double rock"
     }
     if (humanChose == "rock" & pcChose == "paper") {
-        return "you lose :() paper beats rock"
+        return "you lose :() paper beats rock"  + aiScore++
     }
     if (humanChose == "rock" & pcChose == "scissors") {
-        return "you win! rock beats scissors"
+        return "you win! rock beats scissors" + humanScore++
     }
     else {
         return "wft! you chose: " + humanChose + ", and pc chose: " + pcChose;
@@ -45,4 +45,21 @@ function singleRound() {
 
 }
 
-console.log(singleRound());
+
+function game(){
+    return singleRound()
+}
+
+let humanScore=0;
+let aiScore=0;
+
+while (humanScore<5 && aiScore<5) {
+    console.log("your score is: " + humanScore)
+    console.log("pc's score is: " + aiScore)
+    console.log(singleRound());
+    // humanScore = 5
+}
+
+
+
+
