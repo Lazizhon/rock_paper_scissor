@@ -59,6 +59,11 @@ while (humanScore<5 && aiScore<5) {
     console.log(singleRound());
     // humanScore = 5
 }
+if (humanScore == 5) {
+    console.log("YOU WON!!!")
+} else {
+    console.log("PC WON")
+}
 
 
 
